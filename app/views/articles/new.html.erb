@@ -1,0 +1,23 @@
+<h1 class="text-center">New View</h1>
+
+<div>
+
+	<div>
+	
+	
+	<%= form_for @article, url: {action: "create"} do |f| %>
+		  	
+			<%= f.label :title %>
+			<%= f.text_field :title %> <br>
+			<%= f.label :body %>
+		  <%= f.text_field :body, size: "60x12" %><br>
+		  <%= f.submit "Create Article" %>
+	<% end %>
+	
+	
+	
+	</div>
+
+
+
+</div>
