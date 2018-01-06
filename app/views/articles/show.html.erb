@@ -3,6 +3,8 @@
 </h1>
 <span><small><%=link_to "Edit this article", edit_article_path(@article.id)%></small></span>
 
+<span><small><%=link_to "Delete Article", article_path(@article.id), method: :delete, data: {confirm:"Are you sure?"}%></small></span>
+
 <h3>
 	Body: <%=@article.body%>
 </h3>
