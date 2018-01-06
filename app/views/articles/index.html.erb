@@ -1,4 +1,9 @@
-<h1>Articles#index</h1>
+<%if @articles.empty?%>
+	<h1 id="no-articles">
+		No articles created.
+	</h1>
+
+<%else%>
 <ul>
 	<%@articles.each do |article|%>
 	<li>
@@ -8,4 +13,6 @@
 	</li>
 	<%end%>
 </ul>
+<%end%>
+
 <%= link_to "New Article", new_article_path %>
