@@ -1,9 +1,10 @@
 <h1>
-	<%=@article.title%>
+	Title : <%=@article.title%>
 </h1>
+<span><small><%=link_to "Edit this article", edit_article_path(@article.id)%></small></span>
 
 <h3>
-	<%=@article.body%>
+	Body: <%=@article.body%>
 </h3>
 
 <%=link_to "See all articles", articles_path%>
