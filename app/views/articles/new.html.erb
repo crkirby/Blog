@@ -1,4 +1,7 @@
-<h1 class="text-center">New View</h1>
+<h1 class="text-center">
+	<span class="text-center-1">New View</span>
+	<span class="text-center-2">Newer View</span>
+</h1>
 
 <div>
 
@@ -6,8 +9,16 @@
 	
 	
 	<%= form_for @article, url: {action: "create"} do |f| %>
-		  	
-			<%= f.label :title %>
+		<%if @article.errors.any?%>
+			
+			<ul>
+				<li>You have <%=pluralize(@article.errors.count, "error")%></li>
+				<%@article.errors.full_messages.each do |err|%>
+					<li class="error"><%= err %></li>
+				<%end%>
+			</ul>
+		<%end%>
+		<%= f.label :title %>
 			<%= f.text_field :title %> <br>
 			<%= f.label :body %>
 		  <%= f.text_field :body, size: "60x12" %><br>

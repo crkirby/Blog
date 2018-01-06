@@ -1,3 +1,19 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.text-center{
+	&-1{
+		letter-spacing: 1rem;
+	}
+	
+	&-2{
+		letter-spacing: 1.2rem;
+	}
+}
+
+.error{
+	color:red;
+	font-weight: 500;
+	text-transform: uppercase;
+}
