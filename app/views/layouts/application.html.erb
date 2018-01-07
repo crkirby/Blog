@@ -9,10 +9,12 @@
   </head>
 
   <body>
+	  
 	  <%flash.each do |key, msg|%>
 	  	<p><%=msg%></p>
 	  <%end%>
-	  <nav>
+	  
+	  <nav class="nav">
 	  	<a><%=link_to "Home", "#"%></a>
 	  	<a><%=link_to "About", "#"%></a>
 	  	<a><%=link_to "Services", "#"%></a>
@@ -24,10 +26,13 @@
 		  <%else%>
 			<a><%=link_to "Blog", articles_path%></a>
 			<a><%=link_to "My settings", "#"%></a>
-		  <a><%=link_to "Sign out", destroy_user_session_path%>
-			
+		  <a><%=link_to "Sign out", destroy_user_session_path%></a>
 		  <%end%>
+			  
 	  </nav>
+		  
+		  
     <%= yield %>
+		  
   </body>
 </html>

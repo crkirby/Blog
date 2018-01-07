@@ -1,0 +1,77 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'grid';
+
+.header{
+	background-image: linear-gradient(to top left, rgba(236,183,66,0.6), rgba(0,0,0,0.95) ), url("banner.jpg");
+	height: 95vh;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-bottom: 2px solid black;
+	
+	&__textbox{
+		position: absolute;
+		top: 36%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		color: whitesmoke;
+		text-align: center;
+		
+		&-main{
+			display: block;
+			font-size: 58px;
+			letter-spacing: 50px;
+			text-transform: uppercase;
+		}
+		
+		&-sub{
+			display: block;
+			font-size: 35px;
+			letter-spacing: 18px;
+			text-transform: uppercase;
+		}
+	}
+	
+	&__btn{
+		position: absolute;
+		top: 48%;
+		left:48%;
+		transform: translate(-50%,-50%);
+		margin-top: 30px; 
+		border: 1px solid rgba(169,76,29,0.9);
+		border-radius: 100px;
+		padding: 30px;
+		color: white;
+		text-transform: uppercase;
+		transition: all .3s;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+		font-size: 18px;
+		&:hover{
+			background-color: rgba(169,76,29,0.9);
+			color:black;
+		}
+		/*debug just get it from natours*/
+		&:visited{
+			transform: translateY(0);
+		}
+	}
+}

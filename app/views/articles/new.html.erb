@@ -1,11 +1,8 @@
+<section>
 <h1 class="text-center">
 	New article form
 </h1>
 
-<div>
-
-	<div>
-	
 	
 	<%= form_for @article, url: {action: "create"} do |f| %>
 		<%if @article.errors.any?%>
@@ -23,11 +20,5 @@
 		  <%= f.text_field :body, size: "60x12" %><br>
 		  <%= f.submit "Create Article" %>
 	<% end %>
+</section>	
 	
-	
-	
-	</div>
-
-
-
-</div>
