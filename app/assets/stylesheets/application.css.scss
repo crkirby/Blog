@@ -29,11 +29,17 @@
 	margin-bottom: 15px;
 	position: fixed;
 	width: 100%;
+	
+	& > a:hover{
+		color:  rgba(169,76,29,0.8);
+	}
+	z-index: 1;
 }
 
 a:link,
 a:visited{
 	text-decoration: none;
+	color: white;
 	
 }
 

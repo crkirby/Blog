@@ -69,9 +69,19 @@
 			background-color: rgba(169,76,29,0.9);
 			color:black;
 		}
-		/*debug just get it from natours*/
-		&:visited{
-			transform: translateY(0);
-		}
+		
+	}
+}
+
+.footer{
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+	height: 25vh;
+	color:white;
+	
+	&-info{
+		background-color: rgba(0,0,0,0.85);
+		padding: 5px;
+		height: 30px;
 	}
 }
